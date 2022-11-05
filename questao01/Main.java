@@ -15,7 +15,7 @@ public class Main {
 		int dosesReforco;
 		int meses;
 		int publicoInfantil = 1500;
-		final int TOTAL_VACINAS = 2;
+		final int TOTAL_VACINAS = 6;
 		
 		List<Vacina> vacines =new ArrayList<>(TOTAL_VACINAS);
 		
