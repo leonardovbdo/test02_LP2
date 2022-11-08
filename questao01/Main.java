@@ -22,7 +22,7 @@ public class Main {
 		System.out.println("### PAINEL ###");
 		
 		for(int i = 0; i < TOTAL_VACINAS; i++) {
-			System.out.print("\nINFORME O NOME DA VACINA: ");
+			System.out.print("\nINFORME O NOME DA VACINA #"+(i+1)+": ");
 			nome = input.nextLine();
 			
 			System.out.print("INFORME A DOENÇA QUE SE OBTÉM IMUNIZAÇÃO: ");
@@ -43,6 +43,7 @@ public class Main {
 		}
 		
 		char opcao;
+		boolean ligado = true;
 		do {
 		System.out.println("\n#### INFORME QUAL FUNÇÃO DESEJA REALIZAR ####");
 		System.out.println("\n[A] - REGISTRAR NOVA CONCLUSÃO DE CICLO DE APLICAÇÃO DE UMA VACINA");
@@ -50,21 +51,20 @@ public class Main {
 		System.out.println("[C] - MOSTRAR QUAL VACINA POSSUI O MAIOR QUANTITATIVO DE DOSES PREVISTAS");
 		System.out.println("[D] - ENCERRAR O PROGRAMA.");
 		opcao = input.nextLine().charAt(0);
-		
-		
+
 		switch (opcao) {
 		case 'A','a':
 			System.out.println("INFORME QUAL VACINA DESEJA REGISTRAR A NOVA CONCLUSÃO DE CICLO (1-6)");
 			int escolha = input.nextInt();
 			vacines.get(escolha-1).adicionarConclusaoImunizacao();
-			System.out.println("CICLO DE VACINA CONCLUIDO");
+			System.out.println("CICLO DA VACINA "+ vacines.get(escolha-1).getNome()+" CONCLUIDO");
 			input.nextLine();
 			break;
 			
 		case 'B','b':
 			for(int i = 0; i < TOTAL_VACINAS; i++) {
 				double porcentagem = ((double)vacines.get(i).getImunizacoesCompletas()/ publicoInfantil)*100;
-				System.out.println(porcentagem +"% do públic infantil foi imunizado com a vacina " + (i+1));
+				System.out.println(porcentagem +"% do público infantil foi imunizado com a vacina " + vacines.get(i).getNome());
 			}
 			break;
 			
@@ -82,9 +82,11 @@ public class Main {
 			}
 			System.out.println("\nVACINAS COM MAIOR QUANTIDADE DE DOSES: " + nomeVacinas);
 			break;
+
+			default:ligado = false;
 		}
 		
-		} while (opcao != 'D' && opcao != 'd');
+		} while (ligado);
 		
 		input.close();
 		System.out.println("ENCERRAMENTO DA APLICAÇÃO...");
