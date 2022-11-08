@@ -15,4 +15,4 @@ da classe é instanciado, via passagem de parâmetros ao construtor). Há ainda 
 quantidade de crianças para as quais se aplicaram todas as doses da vacina, a ser inicializado com 0 (zero). Além dos métodos
 de acesso getter dos campos de instância, convém destacar 2 (dois) outros métodos, a saber:
 
-![file](/assets/Capturar3.PNG)
+![file](/assets/Capturar2.PNG)
