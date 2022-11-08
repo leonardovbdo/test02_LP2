@@ -5,6 +5,8 @@ A avaliação está composta de duas questões que envolvem desenvolvimento de s
 Considere implementação de classe para encapsulamento de dados típicos de vacinas destinados ao público infantil
 da forma que se segue na classe Vacina.
 
+![table de questoes](/assets/Capturar1.png)
+
 De acordo com tal implementação, os dados encapsulados de cada vacina incluem nome, doenças contra as quais se obtém
 imunização, quantidade de doses de ciclo inicial, quantidade de doses de ciclo de reforço (quando houver) e quantidade de
 meses contados após nascimento a partir dos quais se inicia sua aplicação (todos inicializados no momento em que novo objeto
